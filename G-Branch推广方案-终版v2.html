@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G-Branch® · 全国上市推广战略方案 2026</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg0:#05080F; --bg1:#0A0F1C; --bg2:#0F1626; --bg3:#162033;
+  --g1:#D4B87A; --g2:#A8862E; --g3:#6A5218; --g4:#3A2D0E;
+  --gfill:rgba(168,134,46,0.09); --gborder:rgba(168,134,46,0.30);
+  --gline:rgba(168,134,46,0.14); --line:rgba(255,255,255,0.06);
+  --b1:#4A7AB8; --bfill:rgba(74,122,184,0.13);
+  --t1:#EDE7D8; --t2:#9A9080; --t3:#5C5448;
+  --r: 12px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+html { scroll-behavior:smooth }
+body {
+  font-family:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  background:var(--bg0); color:var(--t1);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* ══ HERO ══ */
+.hero {
+  text-align:center;
+  padding:56px 24px 48px;
+  position:relative; overflow:hidden;
+  background:radial-gradient(ellipse 140% 90% at 50% -10%, #0D1830 0%, #05080F 65%);
+  border-bottom:1px solid var(--gline);
+}
+.hero::after {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 500px 250px at 15% 110%, rgba(168,134,46,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 250px at 85% 110%, rgba(26,53,96,.12) 0%, transparent 70%);
+}
+.hero-inner { position:relative; z-index:1; max-width:780px; margin:0 auto }
+
+.badges { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:28px }
+.badge-pill {
+  padding:4px 14px; border-radius:20px; font-size:11px; font-weight:500; letter-spacing:.8px;
+  border:1px solid var(--gline); color:var(--t3); background:rgba(255,255,255,.03);
+}
+.badge-pill.gold { border-color:var(--g3); color:var(--g2); background:var(--gfill) }
+
+.hero-eyebrow { font-size:12px; letter-spacing:4px; color:var(--g2); text-transform:uppercase; font-weight:500; margin-bottom:14px }
+
+.hero-main {
+  font-size:clamp(40px, 9vw, 64px); font-weight:900; line-height:1.08; letter-spacing:-1px;
+  background:linear-gradient(155deg,#EAD9B0 0%,#D4B87A 38%,#A8862E 68%,#C4A456 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  margin-bottom:12px;
+}
+.hero-product { font-size:clamp(16px,3.5vw,22px); font-weight:700; color:var(--t1); letter-spacing:.5px; margin-bottom:10px }
+.hero-plan {
+  font-size:clamp(17px, 4vw, 26px); font-weight:800; color:var(--t1);
+  letter-spacing:.5px; margin-bottom:36px;
+  background:linear-gradient(90deg, var(--t1) 60%, var(--g1));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.hero-div {
+  width:120px; height:1px; margin:0 auto 0;
+  background:linear-gradient(90deg,transparent,var(--g2),transparent);
+}
+
+/* ══ NAV ══ */
+.nav {
+  position:sticky; top:0; z-index:500;
+  background:rgba(5,8,15,.93); backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--gline);
+  overflow-x:auto; -webkit-overflow-scrolling:touch;
+}
+.nav-inner { display:flex; min-width:max-content; padding:0 16px }
+.tab {
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  padding:14px 20px; cursor:pointer; user-select:none; white-space:nowrap;
+  border-bottom:2px solid transparent; margin-bottom:-1px; transition:all .2s;
+  min-width:80px;
+}
+.tab:hover .tname { color:var(--g1) }
+.tab.on { border-color:var(--g2) }
+.tab.on .tname { color:var(--g1) }
+.tab.on .tnum { color:var(--g3) }
+.tname { font-size:17px; font-weight:800; color:var(--t3); transition:color .2s; letter-spacing:.2px }
+.tnum { font-size:10px; color:var(--t3); opacity:.55; letter-spacing:.5px }
+
+/* ══ MAIN ══ */
+.main { max-width:960px; margin:0 auto; padding:36px 16px 80px }
+.sec { display:none }
+.sec.on { display:block }
+
+/* Section header */
+.sec-head { margin-bottom:32px }
+.sec-eyebrow { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--g2); font-weight:600; margin-bottom:8px }
+.sec-title { font-size:clamp(22px,5vw,30px); font-weight:900; color:var(--t1); line-height:1.2; margin-bottom:8px }
+.sec-desc { font-size:14px; color:var(--t2); line-height:1.75; max-width:640px }
+
+.gdiv { height:1px; background:linear-gradient(90deg,transparent,var(--g3) 20%,var(--g2) 50%,var(--g3) 80%,transparent); margin:36px 0; opacity:.4 }
+
+/* ══ FLOW CHAIN (总览) ══ */
+.flow {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:0; margin-bottom:36px;
+  border:1px solid var(--gline); border-radius:var(--r); overflow:hidden;
+}
+.flow-step {
+  padding:24px 16px 20px; position:relative; cursor:pointer;
+  border-right:1px solid var(--gline); transition:background .2s;
+  text-align:center;
+}
+.flow-step:last-child { border-right:none }
+.flow-step:hover { background:var(--bg2) }
+.flow-step.on { background:var(--bg2) }
+.flow-step.on .fnum { background:var(--g2); color:#000 }
+.fs-arrow {
+  position:absolute; right:-10px; top:50%; transform:translateY(-50%);
+  z-index:2; width:20px; height:20px;
+  background:var(--bg1); border:1px solid var(--gline); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:9px; color:var(--g2);
+}
+.flow-step:last-child .fs-arrow { display:none }
+.fnum {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:28px; height:28px; border-radius:50%;
+  background:var(--gfill); border:1px solid var(--g3);
+  font-size:12px; font-weight:800; color:var(--g1);
+  margin:0 auto 12px;
+}
+.ficon { font-size:20px; margin-bottom:8px; display:block; opacity:.75 }
+.ftitle { font-size:13px; font-weight:800; color:var(--t1); margin-bottom:4px; line-height:1.3 }
+.fdesc { font-size:11px; color:var(--t3); line-height:1.5 }
+
+/* ══ 目标卡片 ══ */
+.goal-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:36px }
+.gc {
+  background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r);
+  padding:20px 18px; transition:border-color .2s;
+}
+.gc:hover { border-color:var(--gborder) }
+.gc-tag { font-size:10px; color:var(--g2); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:8px }
+.gc h3 { font-size:15px; font-weight:800; color:var(--g1); margin-bottom:6px }
+.gc p { font-size:13px; color:var(--t2); line-height:1.65 }
+
+/* 联动说明 */
+.chain-note {
+  background:var(--bg1); border:1px solid var(--gborder); border-radius:var(--r);
+  padding:20px 22px; margin-bottom:0;
+}
+.chain-note .cn-t { font-size:11px; color:var(--g2); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:12px }
+.chain-steps { display:flex; flex-direction:column; gap:10px }
+.cs { display:flex; align-items:flex-start; gap:12px }
+.cs-line { display:flex; flex-direction:column; align-items:center; gap:0; flex-shrink:0 }
+.cs-dot { width:8px; height:8px; border-radius:50%; background:var(--g2); flex-shrink:0; margin-top:5px }
+.cs-bar { width:1px; flex:1; background:var(--gline); margin:4px 0 }
+.cs-last .cs-bar { display:none }
+.cs-body { flex:1 }
+.cs-title { font-size:13px; font-weight:700; color:var(--t1); margin-bottom:2px }
+.cs-desc { font-size:12px; color:var(--t3) }
+
+/* ══ 会议卡片 ══ */
+.conf-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:30px }
+.cc {
+  background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r);
+  overflow:hidden; cursor:pointer; transition:border-color .2s,transform .2s;
+}
+.cc:hover { border-color:var(--gborder); transform:translateY(-2px) }
+.cc-top { padding:20px 18px 14px; border-bottom:1px solid var(--line); position:relative; overflow:hidden }
+.cc-top::after { content:attr(data-n); position:absolute; right:-2px; bottom:-16px; font-size:72px; font-weight:900; color:rgba(168,134,46,.06); line-height:1 }
+.cc-station { font-size:10px; color:var(--g2); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:8px }
+.cc-title { font-size:15px; font-weight:800; color:var(--t1); line-height:1.3; margin-bottom:4px; position:relative; z-index:1 }
+.cc-date { font-size:12px; color:var(--t3) }
+.cc-body { padding:14px 18px 18px }
+.cc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px }
+.ctag { padding:3px 9px; border-radius:4px; font-size:11px; background:var(--bg2); border:1px solid var(--gline); color:var(--t2) }
+.cc-btn {
+  display:block; padding:8px; border:1px solid var(--g3); border-radius:6px;
+  text-align:center; font-size:12px; font-weight:600; color:var(--g2);
+  background:var(--gfill); cursor:pointer; transition:all .2s;
+}
+.cc-btn:hover { background:rgba(168,134,46,.16); color:var(--g1) }
+
+/* 区域会议 */
+.rgrid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:10px; margin-bottom:30px }
+.rc {
+  background:var(--bg1); border:1px solid var(--gline);
+  border-left:2px solid var(--g2); border-radius:0 10px 10px 0;
+  padding:13px 16px; transition:background .2s;
+}
+.rc:hover { background:var(--bg2) }
+.rc-name { font-size:13px; font-weight:700; color:var(--t1); margin-bottom:7px; line-height:1.4 }
+.rc-r { display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--t2); margin-top:3px }
+
+/* 国际 */
+.intl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
+.ic { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden; transition:border-color .2s }
+.ic:hover { border-color:var(--gborder) }
+.ic-top { padding:18px 18px 14px; border-bottom:1px solid var(--line) }
+.ic-label { font-size:10px; color:var(--b1); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:8px }
+.ic-top h3 { font-size:14px; font-weight:700; color:var(--t1); margin-bottom:3px }
+.ic-top p { font-size:12px; color:var(--t3) }
+.ic-body { padding:12px 18px 16px; font-size:13px; color:var(--t2); line-height:1.7 }
+
+/* Sub-section header */
+.sub-h { display:flex; align-items:center; gap:10px; margin:30px 0 16px }
+.sub-h-bar { width:3px; height:18px; background:linear-gradient(var(--g1),var(--g3)); border-radius:2px; flex-shrink:0 }
+.sub-h span { font-size:16px; font-weight:800; color:var(--t1) }
+
+/* ══ 培训 ══ */
+.feat3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:24px }
+.feat { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); padding:20px 18px; text-align:center }
+.feat-ico { font-size:26px; margin-bottom:10px; display:block }
+.feat h4 { font-size:14px; font-weight:800; color:var(--g1); margin-bottom:6px }
+.feat p { font-size:13px; color:var(--t2); line-height:1.6 }
+
+.stat-chips { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px }
+.chip {
+  background:var(--bg1); border:1px solid var(--gline); border-radius:8px;
+  padding:10px 18px; text-align:center; flex:1; min-width:120px;
+}
+.chip-n { display:block; font-size:20px; font-weight:800; color:var(--g1); margin-bottom:2px }
+.chip-l { font-size:11px; color:var(--t3) }
+
+/* 方案对比 */
+.scheme2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px }
+.sch { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden }
+.sch-head { padding:18px 20px 14px; border-bottom:1px solid var(--line); display:flex; gap:12px; align-items:flex-start }
+.sch-badge { padding:3px 10px; border-radius:5px; font-size:11px; font-weight:700; background:var(--gfill); border:1px solid var(--g3); color:var(--g1); flex-shrink:0; margin-top:2px }
+.sch-info h3 { font-size:14px; font-weight:800; color:var(--t1); margin-bottom:3px }
+.sch-info p { font-size:12px; color:var(--t3) }
+.stable { width:100%; border-collapse:collapse }
+.stable th { padding:8px 14px; text-align:left; font-size:10px; font-weight:600; color:var(--t3); letter-spacing:1px; text-transform:uppercase; background:rgba(5,8,15,.5); border-bottom:1px solid var(--line) }
+.stable td { padding:9px 14px; font-size:12px; border-bottom:1px solid var(--line); color:var(--t2); vertical-align:top }
+.stable tr:last-child td { border-bottom:none }
+.stable tr:hover td { background:rgba(168,134,46,.04) }
+.tt { font-family:monospace; font-weight:600; color:var(--g2); white-space:nowrap; font-size:11px }
+.tpart { color:var(--g2)!important; font-size:10px; font-weight:700; letter-spacing:.5px; background:rgba(168,134,46,.06)!important }
+
+/* 区域日程框架 */
+.frame-card { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden; margin-bottom:28px }
+.frame-head { padding:14px 20px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between }
+.frame-head h3 { font-size:15px; font-weight:700; color:var(--t1) }
+.frame-head span { font-size:11px; color:var(--t3) }
+
+/* ══ 直播 ══ */
+.live-stats { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px }
+.ls { background:var(--bg1); border:1px solid var(--gline); border-radius:8px; padding:12px 18px; flex:1; min-width:120px; text-align:center }
+.ls-n { display:block; font-size:20px; font-weight:800; color:var(--g1); margin-bottom:2px }
+.ls-l { font-size:11px; color:var(--t3) }
+
+.half2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px }
+.half { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden }
+.half-head { padding:12px 18px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between }
+.half-title { font-size:14px; font-weight:700; color:var(--t1) }
+.half-time { font-size:10px; color:var(--t3); font-family:monospace }
+.hrow { display:flex; gap:10px; padding:9px 18px; border-bottom:1px solid var(--line); align-items:flex-start }
+.hrow:last-child { border:none }
+.ht { font-family:monospace; font-size:10px; font-weight:600; color:var(--g2); min-width:84px; flex-shrink:0; padding-top:2px }
+.hc { flex:1; font-size:12.5px; color:var(--t2); line-height:1.45 }
+.hc-s { font-size:10px; color:var(--t3); margin-top:2px }
+.live-dot { display:inline-flex; align-items:center; gap:4px; color:#E05050; font-size:10px; font-weight:600 }
+.live-dot::before { content:''; width:5px; height:5px; border-radius:50%; background:#E05050; animation:blink 1.4s ease-in-out infinite }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+.sched-table { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden }
+.sched-head { padding:14px 20px; border-bottom:1px solid var(--line) }
+.sched-head h3 { font-size:15px; font-weight:700; color:var(--t1); margin-bottom:3px }
+.sched-head p { font-size:12px; color:var(--t3) }
+.ltable { width:100%; border-collapse:collapse }
+.ltable th { padding:9px 16px; text-align:left; font-size:10px; font-weight:600; color:var(--t3); letter-spacing:1px; text-transform:uppercase; background:rgba(5,8,15,.5); border-bottom:1px solid var(--line) }
+.ltable td { padding:11px 16px; font-size:13px; border-bottom:1px solid var(--line); color:var(--t2) }
+.ltable tr:last-child td { border-bottom:none }
+.ltable tr:hover td { background:rgba(168,134,46,.04) }
+.lrnd { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:var(--gfill); border:1px solid var(--g3); font-size:11px; font-weight:700; color:var(--g1) }
+.s-ok { background:var(--bfill); color:#7AACDE; border:1px solid rgba(74,122,184,.28); padding:2px 10px; border-radius:4px; font-size:11px; font-weight:600 }
+.s-tbd { background:rgba(70,60,48,.4); color:var(--t3); border:1px solid rgba(80,70,55,.6); padding:2px 10px; border-radius:4px; font-size:11px }
+
+/* ══ 内容 ══ */
+.cgrid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
+.ccard { background:var(--bg1); border:1px solid var(--gline); border-radius:var(--r); overflow:hidden; transition:border-color .2s }
+.ccard:hover { border-color:var(--gborder) }
+.ccard-top { padding:18px 18px 14px; border-bottom:1px solid var(--line) }
+.ccard-ico { font-size:22px; margin-bottom:8px; display:block }
+.ccard-top h3 { font-size:14px; font-weight:800; color:var(--g1) }
+.ccard-body { padding:14px 18px 18px }
+.citem { display:flex; gap:8px; align-items:flex-start; font-size:13px; padding:7px 0; border-bottom:1px solid var(--line); color:var(--t2); line-height:1.55 }
+.citem:last-child { border:none }
+.cbul { color:var(--g2); flex-shrink:0; padding-top:2px; font-size:11px }
+
+/* ══ MODAL ══ */
+.overlay { display:none; position:fixed; inset:0; z-index:999; background:rgba(0,0,0,.8); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:20px }
+.overlay.open { display:flex }
+.modal { background:var(--bg1); border:1px solid var(--gborder); border-radius:16px; width:100%; max-width:680px; max-height:88vh; overflow-y:auto; position:relative; box-shadow:0 40px 100px rgba(0,0,0,.7) }
+.modal-top { padding:28px 32px 20px; border-bottom:1px solid var(--line); position:relative }
+.mico { position:absolute; right:28px; top:20px; font-size:48px; opacity:.08 }
+.mflag { font-size:10px; color:var(--g2); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:8px }
+.modal-top h2 { font-size:19px; font-weight:800; color:var(--t1); line-height:1.3; margin-bottom:4px }
+.modal-top p { font-size:12.5px; color:var(--t3) }
+.mclose { position:absolute; top:14px; right:14px; width:30px; height:30px; border-radius:50%; background:var(--bg3); border:1px solid var(--line); cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center; color:var(--t2); transition:all .2s }
+.mclose:hover { border-color:var(--g3); color:var(--g1) }
+.modal-body { padding:22px 32px 28px }
+.msec { margin-bottom:18px }
+.msec-t { font-size:10px; color:var(--t3); letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:10px; display:flex; align-items:center; gap:8px }
+.msec-t::after { content:''; flex:1; height:1px; background:var(--line) }
+.igrid2 { display:grid; grid-template-columns:1fr 1fr; gap:8px }
+.ibox { background:var(--bg2); border:1px solid var(--line); border-radius:8px; padding:10px 14px }
+.ik { font-size:10px; color:var(--t3); margin-bottom:3px }
+.iv { font-size:13px; font-weight:600; color:var(--t1); line-height:1.4 }
+
+/* ══ MOBILE ══ */
+@media(max-width:680px){
+  .hero { padding:40px 16px 36px }
+  .hero-main { letter-spacing:-.5px }
+  .main { padding:24px 14px 60px }
+  .flow { grid-template-columns:1fr 1fr }
+  .flow-step:nth-child(2) { border-right:none }
+  .flow-step:nth-child(3) { border-top:1px solid var(--gline) }
+  .flow-step:nth-child(4) { border-top:1px solid var(--gline); border-right:none }
+  .fs-arrow { display:none }
+  .goal-row, .conf-grid, .feat3, .scheme2, .half2, .cgrid3, .intl-grid { grid-template-columns:1fr }
+  .stat-chips, .live-stats { flex-direction:row; flex-wrap:wrap }
+  .chip, .ls { min-width:calc(50% - 5px) }
+  .igrid2 { grid-template-columns:1fr }
+  .modal-top, .modal-body { padding-left:20px; padding-right:20px }
+  .tab { padding:12px 14px; min-width:70px }
+  .tname { font-size:13px }
+  .rgrid { grid-template-columns:1fr }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="badges">
+      <span class="badge-pill gold">先健科技</span>
+      <span class="badge-pill gold">NMPA 2025.11 批准</span>
+      <span class="badge-pill">中国原创</span>
+      <span class="badge-pill">全球领先</span>
+    </div>
+    <div class="hero-eyebrow">G-Branch® Endovascular Repair System</div>
+    <div class="hero-main">登峰造G · 引领未来</div>
+    <div class="hero-product">G-Branch® 腔内修复系统</div>
+    <div class="hero-plan">全国上市推广战略方案 · 2026</div>
+    <div class="hero-div"></div>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="tab on" onclick="show('overview',this)"><span class="tname">推广总览</span><span class="tnum">策略概览</span></div>
+    <div class="tab" onclick="show('conference',this)"><span class="tname">学术会议</span><span class="tnum">全国·区域·国际</span></div>
+    <div class="tab" onclick="show('training',this)"><span class="tname">G-Master 培训</span><span class="tnum">术者培养体系</span></div>
+    <div class="tab" onclick="show('broadcast',this)"><span class="tname">手术直播</span><span class="tnum">12场/年</span></div>
+    <div class="tab" onclick="show('content',this)"><span class="tname">循证医学</span><span class="tnum">证据·传播</span></div>
+  </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<div class="main">
+
+<!-- ▸ 推广总览 -->
+<div id="overview" class="sec on">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Strategic Overview</div>
+    <div class="sec-title">四大目标 · 一条落地链条</div>
+    <div class="sec-desc">G-Branch® 全国上市推广以「认知建立 → 技术培训 → 手术传播 → 证据沉淀」为逻辑主轴，四大板块环环相扣，共同支撑产品学术地位与临床落地。</div>
+  </div>
+
+  <!-- 链条流程 -->
+  <div class="flow">
+    <div class="flow-step on" onclick="show('conference',document.querySelectorAll('.tab')[1])">
+      <div class="fs-arrow">▶</div>
+      <div class="fnum">01</div>
+      <span class="ficon">🏛</span>
+      <div class="ftitle">学术会议推广</div>
+      <div class="fdesc">建立品牌认知<br>树立学术权威</div>
+    </div>
+    <div class="flow-step" onclick="show('training',document.querySelectorAll('.tab')[2])">
+      <div class="fs-arrow">▶</div>
+      <div class="fnum">02</div>
+      <span class="ficon">🎓</span>
+      <div class="ftitle">G-Master 培训</div>
+      <div class="fdesc">培养术者团队<br>实现临床落地</div>
+    </div>
+    <div class="flow-step" onclick="show('broadcast',document.querySelectorAll('.tab')[3])">
+      <div class="fs-arrow">▶</div>
+      <div class="fnum">03</div>
+      <span class="ficon">📡</span>
+      <div class="ftitle">手术直播联播</div>
+      <div class="fdesc">展示真实技术<br>降低学习曲线</div>
+    </div>
+    <div class="flow-step" onclick="show('content',document.querySelectorAll('.tab')[4])">
+      <div class="fnum">04</div>
+      <span class="ficon">📊</span>
+      <div class="ftitle">学术循证医学</div>
+      <div class="fdesc">沉淀循证证据<br>强化品牌壁垒</div>
+    </div>
+  </div>
+
+  <!-- 战略目标 -->
+  <div class="goal-row">
+    <div class="gc"><div class="gc-tag">Objective 01</div><h3>学术影响力</h3><p>通过全国三大会 + 区域推广 + 国际展示，1—2 年内建立 G-Branch® 学术权威性与技术认知度</p></div>
+    <div class="gc"><div class="gc-tag">Objective 02</div><h3>临床普及</h3><p>G-Master 培训体系覆盖全国主要中心，培养掌握 G-Branch 手术技术的规范化术者团队</p></div>
+    <div class="gc"><div class="gc-tag">Objective 03</div><h3>市场渗透</h3><p>推动重点医院产品准入，实现临床落地，建立稳定使用基础与口碑效应</p></div>
+    <div class="gc"><div class="gc-tag">Objective 04</div><h3>品牌建设</h3><p>打造「中国原创、国际领先」品牌形象，在国际舞台展示中国血管外科原创创新实力</p></div>
+  </div>
+
+  <div class="gdiv"></div>
+
+  <!-- 联动逻辑 -->
+  <div class="chain-note">
+    <div class="cn-t">四大板块联动逻辑</div>
+    <div class="chain-steps">
+      <div class="cs">
+        <div class="cs-line"><div class="cs-dot"></div><div class="cs-bar"></div></div>
+        <div class="cs-body"><div class="cs-title">学术会议推广 → 建立认知</div><div class="cs-desc">全国级（SEC/CVC/CEC）+ 区域级 + 国际级会议，让更多医生了解 G-Branch®，形成学术讨论热度</div></div>
+      </div>
+      <div class="cs">
+        <div class="cs-line"><div class="cs-dot"></div><div class="cs-bar"></div></div>
+        <div class="cs-body"><div class="cs-title">G-Master 培训 → 落地术者</div><div class="cs-desc">从认知到实操，通过线下学习班（每季 2—3 期）将意向术者转化为有能力独立操作的认证术者</div></div>
+      </div>
+      <div class="cs">
+        <div class="cs-line"><div class="cs-dot"></div><div class="cs-bar"></div></div>
+        <div class="cs-body"><div class="cs-title">手术直播联播 → 传播技术</div><div class="cs-desc">【登峰造G】G-Branch 中国行，每月 1 场多中心联播，真实手术场景降低更广泛术者的学习曲线</div></div>
+      </div>
+      <div class="cs cs-last">
+        <div class="cs-line"><div class="cs-dot"></div><div class="cs-bar"></div></div>
+        <div class="cs-body"><div class="cs-title">学术循证医学 → 沉淀证据</div><div class="cs-desc">病例专栏 + SCI 论文 + 病例库，将每台手术、每次培训转化为可积累、可传播的学术资产</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ▸ 学术会议 -->
+<div id="conference" class="sec">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Pillar 01 · Academic Conference</div>
+    <div class="sec-title">学术会议推广</div>
+    <div class="sec-desc">全国级 · 区域级 · 国际级三层矩阵，系统建立 G-Branch® 学术权威性与品牌影响力</div>
+  </div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>全国三大靶向会议</span></div>
+  <div class="conf-grid">
+    <div class="cc" onclick="openM('sec')">
+      <div class="cc-top" data-n="1">
+        <div class="cc-station">全国第一站 · 2026 / 07</div>
+        <div class="cc-title">SEC 2026<br>南方血管外科年会</div>
+        <div class="cc-date">长沙北辰国际会议中心 · 7月16—19日</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-tags"><span class="ctag">发布会</span><span class="ctag">卫星/专题会</span><span class="ctag">手术直播</span><span class="ctag">G-Master培训</span></div>
+        <div class="cc-btn">查看完整方案 →</div>
+      </div>
+    </div>
+    <div class="cc" onclick="openM('cvc')">
+      <div class="cc-top" data-n="2">
+        <div class="cc-station">全国第二站 · 2026 / 09</div>
+        <div class="cc-title">CVC 2026<br>中国血管大会</div>
+        <div class="cc-date">2026年9月3—5日</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-tags"><span class="ctag">上市会</span><span class="ctag">卫星会</span><span class="ctag">展台体验</span></div>
+        <div class="cc-btn">查看完整方案 →</div>
+      </div>
+    </div>
+    <div class="cc" onclick="openM('cec')">
+      <div class="cc-top" data-n="3">
+        <div class="cc-station">全国第三站 · 2026 / 10—11</div>
+        <div class="cc-title">CEC 2026<br>中国血管腔内大会</div>
+        <div class="cc-date">2026年10月29日 — 11月1日</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-tags"><span class="ctag">上市会</span><span class="ctag">卫星会</span><span class="ctag">G-Master培训</span></div>
+        <div class="cc-btn">查看完整方案 →</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>区域级会议（持续确认中）</span></div>
+  <div class="rgrid">
+    <div class="rc"><div class="rc-name">2026年山西血管外科年会</div><div class="rc-r">📅 2026 / 07 / 10—12 &nbsp;·&nbsp; 📍 太原 &nbsp;·&nbsp; 👤 董红霖</div></div>
+    <div class="rc"><div class="rc-name">2026 中原血管论坛</div><div class="rc-r">📅 2026 / 07 / 24—26 &nbsp;·&nbsp; 📍 郑州 &nbsp;·&nbsp; 👤 翟水亭 · 李坤</div></div>
+    <div class="rc"><div class="rc-name">第二届西藏血管大会</div><div class="rc-r">📅 2026 / 08 / 14—16 &nbsp;·&nbsp; 📍 拉萨 &nbsp;·&nbsp; 👤 普布次仁</div></div>
+    <div class="rc"><div class="rc-name">第十届华东六省一市血管外科大会</div><div class="rc-r">📅 2026 / 08 / 14—16 &nbsp;·&nbsp; 📍 福州 &nbsp;·&nbsp; 👤 郭平凡 · 蔡方刚</div></div>
+    <div class="rc"><div class="rc-name">中国血管外科并发症大会暨江西省血管外科年会</div><div class="rc-r">📅 2026 / 10 / 16—17 &nbsp;·&nbsp; 📍 南昌 &nbsp;·&nbsp; 👤 周为民</div></div>
+    <div class="rc" style="border-left-color:var(--t3);opacity:.5"><div class="rc-name">其他各大区 / 省级血管外科会议</div><div class="rc-r">📅 持续确认中 &nbsp;·&nbsp; 📍 华东·华南·西南·华北·华中·西北·东北</div></div>
+  </div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>国际会议展示（中期规划）</span></div>
+  <div class="intl-grid">
+    <div class="ic"><div class="ic-top"><div class="ic-label">International · 2026.11</div><h3>VEITH Symposium 2026</h3><p>纽约 · 国际血管外科顶级会议</p></div><div class="ic-body">手术直播 + 大会讲课，在国际舞台展示中国原创创新成果</div></div>
+    <div class="ic"><div class="ic-top"><div class="ic-label">International · 2027.01</div><h3>LINC 2027</h3><p>莱比锡 · 心血管介入治疗大会</p></div><div class="ic-body">手术直播 + 专题讲课，向欧洲学术界展示 G-Branch® 成果</div></div>
+    <div class="ic"><div class="ic-top"><div class="ic-label">International · 2027.04</div><h3>Charing Cross 2027</h3><p>伦敦 · 国际血管外科会议</p></div><div class="ic-body">国际专家交流与技术推广，持续构建国际品牌认知</div></div>
+  </div>
+
+  <div class="sub-h" style="margin-top:36px"><div class="sub-h-bar"></div><span>全国上市会 · 执行日程（两套方案，根据大会规模灵活选用）</span></div>
+  <div class="scheme2">
+    <div class="sch">
+      <div class="sch-head"><span class="sch-badge">方案一</span><div class="sch-info"><h3>卫星会 · 1 小时</h3><p>「登峰造G·引领未来」· 卫星会或开幕式后时段</p></div></div>
+      <table class="stable">
+        <thead><tr><th>时间</th><th>内容</th><th>专家</th></tr></thead>
+        <tbody>
+          <tr><td class="tt">3 min</td><td>开场视频</td><td>—</td></tr>
+          <tr><td class="tt">10 min</td><td>开场致辞</td><td>会议主席 + 企业代表</td></tr>
+          <tr><td class="tt">10 min</td><td>G-Branch® 全国巡回发布仪式</td><td>全体嘉宾</td></tr>
+          <tr><td class="tt">10 min</td><td>从临床难题到中国方案</td><td>郭伟</td></tr>
+          <tr><td class="tt">10 min</td><td>复杂 TAAA 临床实践与策略</td><td>区域使用专家</td></tr>
+          <tr><td class="tt">17 min</td><td>创新引领，共话未来（讨论）</td><td>全体嘉宾</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sch">
+      <div class="sch-head"><span class="sch-badge">方案二</span><div class="sch-info"><h3>专题会 · 2 小时</h3><p>「登峰造G·引领未来」· 独立专题，建议大会议室</p></div></div>
+      <table class="stable">
+        <thead><tr><th>时间</th><th>内容</th><th>专家</th></tr></thead>
+        <tbody>
+          <tr><td colspan="3" class="tpart" style="padding:8px 14px">▸ Part 1 — 从临床难题到创新方案</td></tr>
+          <tr><td class="tt">3 min</td><td>开场视频</td><td>—</td></tr>
+          <tr><td class="tt">10 min</td><td>开场致辞 + 发布仪式</td><td>会议主席 + 企业代表</td></tr>
+          <tr><td class="tt">10 min</td><td>G-Branch® 原创之路</td><td>郭伟</td></tr>
+          <tr><td colspan="3" class="tpart" style="padding:8px 14px">▸ Part 2 — 从创新方案到应用实践</td></tr>
+          <tr><td class="tt">10×3 min</td><td>复杂 TAAA 临床实践</td><td>区域使用专家 × 3</td></tr>
+          <tr><td class="tt">30 min</td><td>圆桌讨论</td><td>全体嘉宾</td></tr>
+          <tr><td class="tt">20 min</td><td>实战演练</td><td>全体嘉宾</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ▸ G-Master 培训 -->
+<div id="training" class="sec">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Pillar 02 · G-Master Program</div>
+    <div class="sec-title">G-Master 卓越术者培养计划</div>
+    <div class="sec-desc">将会议中建立的学术认知转化为真实临床能力——从理论到模拟再到手术，系统培养具备独立操作能力的认证术者</div>
+  </div>
+
+  <div class="feat3">
+    <div class="feat"><span class="feat-ico">📚</span><h4>理论授课</h4><p>G-Branch® 技术原理与设计理念系统讲解，构建完整临床认知框架</p></div>
+    <div class="feat"><span class="feat-ico">🎮</span><h4>模拟器训练</h4><p>手术全流程操作培训，模拟器强化练习，系统缩短学习曲线</p></div>
+    <div class="feat"><span class="feat-ico">🔴</span><h4>手术观摩 / 直播</h4><p>真实场景观摩 + 直播联动，结业颁发认证证书，建立术者档案</p></div>
+  </div>
+
+  <div class="stat-chips">
+    <div class="chip"><span class="chip-n">按季度</span><span class="chip-l">举办频率</span></div>
+    <div class="chip"><span class="chip-n">2—3 期</span><span class="chip-l">每季度场次</span></div>
+    <div class="chip"><span class="chip-n">15—20 人</span><span class="chip-l">每期学员规模</span></div>
+    <div class="chip"><span class="chip-n">结业证书</span><span class="chip-l">术者培训档案</span></div>
+  </div>
+
+  <div class="gdiv"></div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>区域专题会 · 标准日程框架（约 2 小时）</span></div>
+  <div class="frame-card">
+    <div class="frame-head"><h3>区域专题会标准日程</h3><span>适用于各大区 / 省级血管外科会议</span></div>
+    <table class="stable">
+      <thead><tr><th>时间</th><th>环节</th><th>内容</th><th>负责人</th></tr></thead>
+      <tbody>
+        <tr><td class="tt">5 min</td><td style="color:var(--t1);font-weight:600">开场致辞</td><td>欢迎辞</td><td>郭伟教授 + 当地东道主</td></tr>
+        <tr><td class="tt">20 min</td><td style="color:var(--t1);font-weight:600">专题报告一</td><td>G-Branch® 技术原理与全球临床进展</td><td>郭伟教授</td></tr>
+        <tr><td class="tt">20 min</td><td style="color:var(--t1);font-weight:600">专题报告二</td><td>G-Branch® 标准化操作流程详解</td><td>张宏鹏教授</td></tr>
+        <tr><td class="tt">10 min</td><td style="color:var(--t1);font-weight:600">病例分享 1</td><td>典型 TAAA 病例</td><td>已开展中心术者</td></tr>
+        <tr><td class="tt">10 min</td><td style="color:var(--t1);font-weight:600">病例分享 2</td><td>复杂 TAAA 病例</td><td>已开展中心术者</td></tr>
+        <tr><td class="tt">30 min</td><td style="color:var(--t1);font-weight:600">圆桌讨论</td><td>开展 G-Branch® 的机遇与挑战</td><td>全体专家</td></tr>
+        <tr><td class="tt">30 min</td><td style="color:var(--t1);font-weight:600">实战演练</td><td>G-Branch® 操作培训</td><td>技术支持 + 带教老师</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ▸ 手术直播 -->
+<div id="broadcast" class="sec">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Pillar 03 · Live Surgery Series</div>
+    <div class="sec-title">手术直播联播</div>
+    <div class="sec-desc">【登峰造G】G-Branch® 中国行 · 将术者培训成果通过直播规模化传播，让更多医生直观学习 G-Branch® 手术技术</div>
+  </div>
+
+  <div class="live-stats">
+    <div class="ls"><span class="ls-n">12 场</span><span class="ls-l">全年 · 每月 1 场</span></div>
+    <div class="ls"><span class="ls-n">半天—全天</span><span class="ls-l">单场时长</span></div>
+    <div class="ls"><span class="ls-n">2—3 家</span><span class="ls-l">中心联播 / 场</span></div>
+    <div class="ls"><span class="ls-n">血管资讯</span><span class="ls-l">专业医学直播平台</span></div>
+  </div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>单场直播 · 标准日程框架</span></div>
+  <div class="half2">
+    <div class="half">
+      <div class="half-head"><span class="half-title">上半场</span><span class="half-time">08:30 — 13:30</span></div>
+      <div class="hrow"><span class="ht">08:30–08:40</span><div class="hc">开场致辞<div class="hc-s">会议主席</div></div></div>
+      <div class="hrow"><span class="ht">08:40–09:10</span><div class="hc">讲课 1：G-Branch® 技术原理与进展<div class="hc-s">核心术者</div></div></div>
+      <div class="hrow"><span class="ht">09:10–09:40</span><div class="hc">讲课 2：G-Branch® 标准化操作要点<div class="hc-s">核心术者</div></div></div>
+      <div class="hrow"><span class="ht">09:40–11:40</span><div class="hc"><span class="live-dot">LIVE</span> 手术直播 1<div class="hc-s">中心一术者团队</div></div></div>
+      <div class="hrow"><span class="ht">11:40–12:40</span><div class="hc"><span class="live-dot">LIVE</span> 手术直播 2<div class="hc-s">中心二术者团队</div></div></div>
+      <div class="hrow"><span class="ht">12:40–13:30</span><div class="hc">会议讨论<div class="hc-s">讨论专家</div></div></div>
+    </div>
+    <div class="half">
+      <div class="half-head"><span class="half-title">下半场</span><span class="half-time">13:30 — 17:40</span></div>
+      <div class="hrow"><span class="ht">13:30–14:00</span><div class="hc">讲课 4：并发症预防与管理<div class="hc-s">临床专家</div></div></div>
+      <div class="hrow"><span class="ht">14:00–16:00</span><div class="hc"><span class="live-dot">LIVE</span> 手术直播 3<div class="hc-s">中心三术者团队</div></div></div>
+      <div class="hrow"><span class="ht">16:00–17:00</span><div class="hc">讲课 5：多中心数据分享<div class="hc-s">临床专家</div></div></div>
+      <div class="hrow"><span class="ht">17:00–17:30</span><div class="hc">会议讨论<div class="hc-s">讨论专家</div></div></div>
+      <div class="hrow"><span class="ht">17:30–17:40</span><div class="hc">总结致辞<div class="hc-s">会议主席</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-h"><div class="sub-h-bar"></div><span>2026 年下半年系列场次规划</span></div>
+  <div class="sched-table">
+    <div class="sched-head">
+      <h3>【登峰造G】G-Branch® 中国行 · 2026 下半年</h3>
+      <p>含术前讨论 + 手术直播 + 术后复盘 + 专题演讲</p>
+    </div>
+    <table class="ltable">
+      <thead><tr><th>场次</th><th>时间</th><th>中心 / 城市</th><th>主刀术者</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td><span class="lrnd">1</span></td><td style="color:var(--t1);font-weight:600">7 月下旬</td><td>解放军总医院（北京）</td><td>郭伟教授团队</td><td><span class="s-tbd">待确认</span></td></tr>
+        <tr><td><span class="lrnd">2</span></td><td style="color:var(--t1);font-weight:600">8 月下旬</td><td>解放军总医院 · 上海中山 · 中山一院</td><td>PI 中心 &amp; 区域 KOL</td><td><span class="s-tbd">待确认</span></td></tr>
+        <tr><td><span class="lrnd">3</span></td><td>9 月下旬</td><td>待定</td><td>待定</td><td><span class="s-tbd">规划中</span></td></tr>
+        <tr><td><span class="lrnd">4</span></td><td>10 月下旬</td><td>待定</td><td>待定</td><td><span class="s-tbd">规划中</span></td></tr>
+        <tr><td><span class="lrnd">5</span></td><td>11 月下旬</td><td>待定</td><td>待定</td><td><span class="s-tbd">规划中</span></td></tr>
+        <tr><td><span class="lrnd">6</span></td><td>12 月下旬</td><td>待定</td><td>待定</td><td><span class="s-tbd">规划中</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ▸ 循证医学 -->
+<div id="content" class="sec">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Pillar 04 · Academic Output</div>
+    <div class="sec-title">学术循证医学与传播</div>
+    <div class="sec-desc">将每台手术、每次培训、每场直播的成果沉淀为可积累的学术资产，构建 G-Branch® 长期学术壁垒</div>
+  </div>
+
+  <div class="cgrid3">
+    <div class="ccard">
+      <div class="ccard-top"><span class="ccard-ico">📊</span><h3>循证医学证据体系</h3></div>
+      <div class="ccard-body">
+        <div class="citem"><span class="cbul">◆</span><span>GUARANTEE-1/2 及 GUARD 研究数据持续更新发布</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>上市后真实世界研究，多中心数据积累</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>目标发表 SCI 论文，构建学术壁垒</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>多中心临床数据汇总与系统性分析</span></div>
+      </div>
+    </div>
+    <div class="ccard">
+      <div class="ccard-top"><span class="ccard-ico">📝</span><h3>病例专栏与传播</h3></div>
+      <div class="ccard-body">
+        <div class="citem"><span class="cbul">◆</span><span>延续【先见·E术家】【登峰造G】病例专栏</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>每周发布 1—2 例典型 / 复杂病例</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>含手术视频 + 技术要点解析</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>平台：先健 E 学界 · 血管资讯 · 医艺</span></div>
+      </div>
+    </div>
+    <div class="ccard">
+      <div class="ccard-top"><span class="ccard-ico">🗂</span><h3>经典病例库建设</h3></div>
+      <div class="ccard-body">
+        <div class="citem"><span class="cbul">◆</span><span>建立 G-Branch® 产品病例登记与收集体系</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>按 CRF 表格规范收集，确保数据质量</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>整理经典病例，编制可共享案例集</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>建立可追溯、数字化的术者档案体系</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="closeO(event)">
+  <div class="modal">
+    <button class="mclose" onclick="closeM()">✕</button>
+    <div id="modal-in"></div>
+  </div>
+</div>
+
+<script>
+function show(id, tabEl) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if (tabEl) tabEl.classList.add('on');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const MD = {
+  sec: {
+    flag:'全国第一站 · SEC 2026', ico:'🩺',
+    title:'SEC 2026 南方血管外科年会<br>四大推广形式同期举办',
+    sub:'长沙北辰国际会议中心 · 2026年7月16—19日',
+    info:[
+      {k:'会议时间',v:'2026年7月16—19日'},
+      {k:'会议地点',v:'长沙北辰国际会议中心'},
+      {k:'推广组合',v:'发布会 + 卫星/专题会 + 手术直播 + G-Master 培训班'},
+      {k:'展台',v:'产品展示 · 互动体验区 · 操作演示'}
+    ],
+    extra:`<div class="msec"><div class="msec-t">四大推广形式</div><div style="display:flex;flex-direction:column;gap:8px">
+      ${[['发布仪式','G-Branch® 全国巡回发布 @SEC 站'],['卫星/专题','方案一（1h）或方案二（2h）按场地选用'],['手术直播','G-Branch® 手术实况多中心联播'],['G-Master培训','卓越术者培养计划第二期 · 7月18日 09:00—11:00']].map(([t,v])=>`<div style="display:flex;gap:10px;align-items:flex-start"><span style="background:var(--gfill);color:var(--g1);border:1px solid var(--g4);padding:3px 10px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0">${t}</span><span style="font-size:13px;color:var(--t2)">${v}</span></div>`).join('')}
+    </div></div>`
+  },
+  cvc: {
+    flag:'全国第二站 · CVC 2026', ico:'💊',
+    title:'CVC 2026 中国血管大会<br>G-Branch® 全国巡回发布 @CVC',
+    sub:'2026年9月3—5日',
+    info:[{k:'会议时间',v:'2026年9月3—5日'},{k:'推广形式',v:'上市会 + 卫星会 + 展台互动体验'},{k:'展台',v:'产品演示操作 · 互动体验区'},{k:'重点目标',v:'巩固学术地位，扩大华北/华东区域影响力'}],
+    extra:''
+  },
+  cec: {
+    flag:'全国第三站 · CEC 2026', ico:'🔬',
+    title:'CEC 2026 中国血管腔内大会<br>G-Branch® 全国巡回收官站',
+    sub:'2026年10月29日 — 11月1日',
+    info:[{k:'会议时间',v:'2026年10月29日 — 11月1日'},{k:'推广形式',v:'上市会 + 卫星会 + G-Master 培训班'},{k:'展台',v:'产品演示操作 · 互动体验区'},{k:'重点目标',v:'全国巡回收官，强化品牌沉淀与术者培养体系'}],
+    extra:''
+  }
+};
+
+function openM(id) {
+  const d = MD[id]; if (!d) return;
+  document.getElementById('modal-in').innerHTML = `
+    <div class="modal-top">
+      <div class="mico">${d.ico}</div>
+      <div class="mflag">${d.flag}</div>
+      <h2>${d.title}</h2>
+      <p>${d.sub}</p>
+    </div>
+    <div class="modal-body">
+      <div class="msec"><div class="msec-t">基本信息</div><div class="igrid2">${d.info.map(i=>`<div class="ibox"><div class="ik">${i.k}</div><div class="iv">${i.v}</div></div>`).join('')}</div></div>
+      ${d.extra}
+    </div>`;
+  document.getElementById('overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeM() { document.getElementById('overlay').classList.remove('open'); document.body.style.overflow = ''; }
+function closeO(e) { if (e.target === document.getElementById('overlay')) closeM(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeM(); });
+</script>
+</body>
+</html>
