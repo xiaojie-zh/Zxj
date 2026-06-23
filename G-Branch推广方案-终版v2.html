@@ -291,6 +291,44 @@ body {
 .citem:last-child { border:none }
 .cbul { color:var(--g2); flex-shrink:0; padding-top:2px; font-size:11px }
 
+/* ══ 证据专题 Banner ══ */
+.ev-banner {
+  background:var(--bg1); border:1px solid var(--gborder); border-radius:var(--r);
+  overflow:hidden; margin-bottom:4px;
+}
+.ev-book { border-color:rgba(74,122,184,0.35) }
+.ev-tag {
+  text-align:center; padding:16px 24px 14px;
+  font-size:14px; font-weight:600; color:var(--g1); letter-spacing:.5px;
+  border-bottom:1px solid var(--gline);
+  background:linear-gradient(90deg,transparent,rgba(168,134,46,.06),transparent);
+}
+.ev-book .ev-tag { color:#7AACDE; background:linear-gradient(90deg,transparent,rgba(74,122,184,.07),transparent) }
+.ev-pillars {
+  display:grid; grid-template-columns:1fr 1px 1fr 1px 1fr;
+  gap:0; padding:0;
+}
+.ev-p {
+  padding:24px 24px 20px; text-align:center;
+}
+.ev-div { background:var(--gline); margin:20px 0 }
+.ev-book .ev-div { background:rgba(74,122,184,.18) }
+.ev-ico { font-size:26px; display:block; margin-bottom:12px; opacity:.8 }
+.ev-pt { font-size:14px; font-weight:800; color:var(--t1); margin-bottom:8px; line-height:1.3 }
+.ev-pd { font-size:12.5px; color:var(--t2); line-height:1.65 }
+.ev-footer {
+  text-align:center; padding:12px 24px;
+  font-size:12px; font-weight:600; color:var(--g2); letter-spacing:1px;
+  border-top:1px solid var(--gline);
+  background:linear-gradient(90deg,transparent,rgba(168,134,46,.05),transparent);
+}
+.ev-book .ev-footer { color:#7AACDE; background:linear-gradient(90deg,transparent,rgba(74,122,184,.06),transparent) }
+
+@media(max-width:680px){
+  .ev-pillars { grid-template-columns:1fr; }
+  .ev-div { height:1px; width:auto; margin:0 20px }
+}
+
 /* ══ MODAL ══ */
 .overlay { display:none; position:fixed; inset:0; z-index:999; background:rgba(0,0,0,.8); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:20px }
 .overlay.open { display:flex }
@@ -646,13 +684,13 @@ body {
       <div class="ccard-top"><span class="ccard-ico">📊</span><h3>循证医学证据体系</h3></div>
       <div class="ccard-body">
         <div class="citem"><span class="cbul">◆</span><span>GUARANTEE-1/2 及 GUARD 研究数据持续更新发布</span></div>
-        <div class="citem"><span class="cbul">◆</span><span>上市后真实世界研究，多中心数据积累</span></div>
-        <div class="citem"><span class="cbul">◆</span><span>目标发表 SCI 论文，构建学术壁垒</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>上市后真实世界研究，多中心数据持续积累</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>目标发表 SCI 论文，夯实学术证据基础</span></div>
         <div class="citem"><span class="cbul">◆</span><span>多中心临床数据汇总与系统性分析</span></div>
       </div>
     </div>
     <div class="ccard">
-      <div class="ccard-top"><span class="ccard-ico">📝</span><h3>病例专栏与传播</h3></div>
+      <div class="ccard-top"><span class="ccard-ico">📝</span><h3>病例专栏与学术传播</h3></div>
       <div class="ccard-body">
         <div class="citem"><span class="cbul">◆</span><span>延续【先见·E术家】【登峰造G】病例专栏</span></div>
         <div class="citem"><span class="cbul">◆</span><span>每周发布 1—2 例典型 / 复杂病例</span></div>
@@ -663,12 +701,68 @@ body {
     <div class="ccard">
       <div class="ccard-top"><span class="ccard-ico">🗂</span><h3>经典病例库建设</h3></div>
       <div class="ccard-body">
-        <div class="citem"><span class="cbul">◆</span><span>建立 G-Branch® 产品病例登记与收集体系</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>建立 G-Branch® 病例登记与系统收集体系</span></div>
         <div class="citem"><span class="cbul">◆</span><span>按 CRF 表格规范收集，确保数据质量</span></div>
-        <div class="citem"><span class="cbul">◆</span><span>整理经典病例，编制可共享案例集</span></div>
-        <div class="citem"><span class="cbul">◆</span><span>建立可追溯、数字化的术者档案体系</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>整理经典病例，编制可共享临床案例集</span></div>
+        <div class="citem"><span class="cbul">◆</span><span>建立可追溯、数字化的完整术者档案</span></div>
       </div>
     </div>
+  </div>
+
+  <div class="gdiv"></div>
+
+  <!-- 上市后全球多中心临床研究 -->
+  <div class="sub-h"><div class="sub-h-bar"></div><span>上市后全球多中心临床研究</span></div>
+  <div class="ev-banner">
+    <div class="ev-tag">让证据持续发生 · 让信赖持续建立</div>
+    <div class="ev-pillars">
+      <div class="ev-p">
+        <span class="ev-ico">🌐</span>
+        <div class="ev-pt">多中心研究网络</div>
+        <div class="ev-pd">构建覆盖更广的真实世界研究协同，推动全球多中心数据系统积累</div>
+      </div>
+      <div class="ev-div"></div>
+      <div class="ev-p">
+        <span class="ev-ico">🔄</span>
+        <div class="ev-pt">随访闭环与数据沉淀</div>
+        <div class="ev-pd">让即刻结果、长期随访表现与临床价值持续可见，形成完整数据闭环</div>
+      </div>
+      <div class="ev-div"></div>
+      <div class="ev-p">
+        <span class="ev-ico">📋</span>
+        <div class="ev-pt">证据驱动临床信赖</div>
+        <div class="ev-pd">以持续产生的真实世界数据为基础，推动临床认可与规范化应用</div>
+      </div>
+    </div>
+    <div class="ev-footer">发布交付产品 · 研究交付信赖</div>
+  </div>
+
+  <div class="gdiv"></div>
+
+  <!-- 全球100例成书计划 -->
+  <div class="sub-h"><div class="sub-h-bar"></div><span>全球 100 例成书计划</span></div>
+  <div class="ev-banner ev-book">
+    <div class="ev-tag">把实践写成一本书 · 让经验成为行业共同记忆</div>
+    <div class="ev-pillars">
+      <div class="ev-p">
+        <span class="ev-ico">🌍</span>
+        <div class="ev-pt">汇聚全球优秀临床实践</div>
+        <div class="ev-pd">广泛征集关键病例、手术策略与临床经验，覆盖多样化适应症与中心背景</div>
+      </div>
+      <div class="ev-div"></div>
+      <div class="ev-p">
+        <span class="ev-ico">📖</span>
+        <div class="ev-pt">沉淀为一本行业权威之书</div>
+        <div class="ev-pd">将散落的临床实践系统整合，形成可传承、可引用、可讲述的学术专著</div>
+      </div>
+      <div class="ev-div"></div>
+      <div class="ev-p">
+        <span class="ev-ico">👥</span>
+        <div class="ev-pt">形成共同记忆与方法论</div>
+        <div class="ev-pd">让中国术者的创新实践被国际同行看见，让 G-Branch® 的临床智慧得以传承</div>
+      </div>
+    </div>
+    <div class="ev-footer">征集是起笔 · 成书是落章</div>
   </div>
 </div>
 
